@@ -1,4 +1,4 @@
-# PanoDR
+# PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes
 
 # Abstract
 <img src="./assets/teaser.png" width="1000"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
