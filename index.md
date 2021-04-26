@@ -48,7 +48,7 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 <img src="./assets/qualitative/scene_03461_421_RFR.png" width="24%" title="03461_421_RFR"/>
 <img src="./assets/qualitative/_scene_03461_2D_rendering_421_panorama_PIC.png" width="24%" title="03461_421_PICNet"/>
 <img src="./assets/qualitative/_scene_03461_2D_rendering_421_panorama_ours.png" width="24%" title="03461_421_Ours"/>
-</p>
+</p> 
   
 >From Left to right: Input image with the diminished area masked with transparent red, RFR, PICNet and ours.
 
