@@ -8,11 +8,42 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 
 # Qualitative results for diminishing objects from scenes in our test set. 
 <p float="left">
-<img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_masked_inv_mask_orig.png" width="24%" title="03362_13188"/>
+<img src="./assets/qualitative/_scene_03498_2D_rendering_274746_panorama_masked_inv_mask_orig.png" width="24%" title="03362_13188"/>
 <img src="./assets/qualitative/scene_03362_13188_rfr.png" width="24%" title="03362_13188_RFR"/>
 <img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_PIC.png" width="24%" title="03362_13188_PICNet"/>
 <img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_ours.png" width="24%" title="03362_13188_Ours"/>
 </p>
+<p float="left">
+<img src="./assets/qualitative/_scene_03312_2D_rendering_203_panorama_masked_inv_mask.png" width="24%" title="03498_274746"/>
+<img src="./assets/qualitative/scene_03362_13188_rfr.png" width="24%" title="03498_274746_RFR"/>
+<img src="./assets/qualitative/scene_03312_2D_rendering_203_panorama_out_0_PIC.png" width="24%" title="03498_274746_PICNet"/>
+<img src="./assets/qualitative/_scene_03498_2D_rendering_274746_panorama_ours.png" width="24%" title="03498_274746_Ours"/>
+</p>
+<p float="left">
+<img src="./assets/qualitative/_scene_03312_2D_rendering_203_panorama_masked_inv_mask.png" width="24%" title="03312_203"/>
+<img src="./assets/qualitative/scene_03312_2D_rendering_203_panorama_out_0_PIC.png" width="24%" title="03312_203_RFR"/>
+<img src="./assets/qualitative/scene_03312_203_rfr.png" width="24%" title="03312_203_PICNet"/>
+<img src="./assets/qualitative/_scene_03312_2D_rendering_203_panorama_ours.png" width="24%" title="03312_203_Ours"/>
+</p>
+<p float="left">
+<img src="./assets/qualitative/_scene_03424_2D_rendering_947433_panorama_masked_inv_mask.png" width="24%" title="03498_13188"/>
+<img src="./assets/qualitative/scene_03424_947433_rfr.png" width="24%" title="03424_947433_RFR"/>
+<img src="./assets/qualitative/scene_03424_2D_rendering_947433_panorama_out_0_PIC.png" width="24%" title="03424_947433_PICNet"/>
+<img src="./assets/qualitative/_scene_03424_2D_rendering_947433_panorama_ours.png" width="24%" title="03424_947433_Ours"/>
+</p>
+<p float="left">
+<img src="./assets/qualitative/_scene_03316_2D_rendering_652088_panorama_masked_inv_mask.png" width="24%" title="03316_652088"/>
+<img src="./assets/qualitative/_scene_03316_2D_rendering_652088_panorama_masked_RFR.png" width="24%" title="03316_652088_RFR"/>
+<img src="./assets/qualitative/_scene_03316_2D_rendering_652088_panorama_PIC.png" width="24%" title="03316_652088_PICNet"/>
+<img src="./assets/qualitative/_scene_03316_2D_rendering_652088_panorama_ours.png" width="24%" title="03316_652088_Ours"/>
+</p>
+<p float="left">
+<img src="./assets/qualitative/_scene_03461_2D_rendering_421_panorama_masked_inv_mask.png" width="24%" title="03461_421"/>
+<img src="./assets/qualitative/scene_03461_421_RFR.png" width="24%" title="03461_421_RFR"/>
+<img src="./assets/qualitative/_scene_03461_2D_rendering_421_panorama_PIC.png" width="24%" title="03461_421_PICNet"/>
+<img src="./assets/qualitative/_scene_03461_2D_rendering_421_panorama_ours.png" width="24%" title="03461_421_Ours"/>
+</p>
+  
 >From Left to right: Input image with the diminished area masked with transparent red, RFR, PICNet and ours.
 
 # Acknowledgements
