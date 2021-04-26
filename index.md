@@ -8,9 +8,10 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 
 # Qualitative results for diminishing objects from scenes in our test set. From Left to right: Input image with the diminished area masked with transparent red, RFR, PICNet and ours.
 <img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_masked_inv_mask_orig.png" width="24%" title="03362_13188"/>
-<img src="./assets/qualitative/scene_03362_13188_rfr.png" width="24%" title="03362_13188"/>
-<img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_PIC.png" width="24%" title="03362_13188"/>
-<img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_ours.png" width="24%" title="03362_13188"/>
+<img src="./assets/qualitative/scene_03362_13188_rfr.png" width="24%" title="03362_13188_RFR"/>
+<img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_PIC.png" width="24%" title="03362_13188_PICNet"/>
+<img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_ours.png" width="24%" title="03362_13188_Ours"/>
+
 
 # Acknowledgements
 This project has received funding from the European Union's Horizon 2020 innovation programme ATLANTIS under grant agreement No 951900.
