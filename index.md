@@ -49,5 +49,9 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 
 >From Left to right: Input image with the diminished area masked with transparent red, RFR, PICNet and ours.
 
+#  Model Architecture
+
+<img src="./assets/model.png" width="1000"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
+
 # Acknowledgements
 This project has received funding from the European Union's Horizon 2020 innovation programme ATLANTIS under grant agreement No 951900.
