@@ -2,7 +2,7 @@
 
 <img src="./assets/teaser.png" width="1000"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
 
-Diminishing the highlighted (<span style="color:blue">some *red* text</span> mask) object in indoor spherical panorama images. White lines annotate the
+Diminishing the highlighted (<font color='red'>red font</font> mask) object in indoor spherical panorama images. White lines annotate the
 scene’s layout in panorama and perspective views. Left to right: i) masked object to remove, ii) pure inpainting result of
 state-of-the-art methods (top row: RFR [18], bottom row: PICNet [46]), iii) perspective view of inpainted region by these
 methods better shows that they do not necessarily respect the scene’s structural layout, iv) our panorama inpainting that takes
