@@ -16,6 +16,7 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 
 #  PanoDR Model Architecture
 <img src="./assets/model.png" width="1200"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
+
 >The input masked image is encoded twice, once densely by the structure UNet encoder outputing a layout segmentation map,
 and once by the surrounding context encoder, capturing the scene’s context while taking the mask into account via series
 gated convolutions. These are then combined by the structure-aware decoder with a set of per layout component style
