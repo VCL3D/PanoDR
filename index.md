@@ -59,6 +59,5 @@ the diminishing mask.
 
 >From Left to right: Input image with the diminished area masked with transparent red, RFR, PICNet and ours.
 
-
 # Acknowledgements
 This project has received funding from the European Union's Horizon 2020 innovation programme ATLANTIS under grant agreement No 951900.
