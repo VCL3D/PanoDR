@@ -8,12 +8,11 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 
 Diminishing the highlighted (<span style="color:red">red</span> mask) object in indoor spherical panorama images. White lines annotate the
 scene’s layout in panorama and perspective views. Left to right: i) masked object to remove, ii) pure inpainting result of
-state-of-the-art methods (top row: RFR [18], bottom row: PICNet [46]), iii) perspective view of inpainted region by these
+state-of-the-art methods (top row: RFR, bottom row: PICNet), iii) perspective view of inpainted region by these
 methods better shows that they do not necessarily respect the scene’s structural layout, iv) our panorama inpainting that takes
 a step towards preserving the structural reality, v) perspective view of inpainted region by our model, showing superior results
 both in texture generation and layout preservation. The results in this figure depict cases where RFR and PICNet provide
-reasonable structural coherency and aim at showcasing our model’s finer-grained accuracy. Figure 4 presents more qualitative
-examples where the structural in-coherency of RFR and PICNet is more evident
+reasonable structural coherency and aim at showcasing our model’s finer-grained accuracy.
 
 #  PanoDR Model Architecture
 <img src="./assets/model.png" width="1200"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
