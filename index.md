@@ -2,7 +2,7 @@
 
 <img src="./assets/teaser.png" width="1000"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
 
-Diminishing the highlighted (<span style="color:red">red</span> mask) object in indoor spherical panorama images. White lines annotate the
+>Diminishing the highlighted (<span style="color:red">red</span> mask) object in indoor spherical panorama images. White lines annotate the
 scene’s layout in panorama and perspective views. Left to right: i) masked object to remove, ii) pure inpainting result of
 state-of-the-art methods (top row: RFR, bottom row: PICNet), iii) perspective view of inpainted region by these
 methods better shows that they do not necessarily respect the scene’s structural layout, iv) our panorama inpainting that takes
@@ -16,7 +16,7 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 
 #  PanoDR Model Architecture
 <img src="./assets/model.png" width="1200"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
-The input masked image is encoded twice, once densely by the structure UNet encoder outputing a layout segmentation map,
+>The input masked image is encoded twice, once densely by the structure UNet encoder outputing a layout segmentation map,
 and once by the surrounding context encoder, capturing the scene’s context while taking the mask into account via series
 gated convolutions. These are then combined by the structure-aware decoder with a set of per layout component style
 codes that are extracted by the complete input image. Two SEAN residual blocks ensure the structural alignment of the
@@ -67,6 +67,19 @@ the diminishing mask.
 </p>
 
 >From Left to right: Input image with the diminished area masked with transparent red, RFR, PICNet and ours.
+
+# AR/DR Application
+
+<p float="left">
+<img src="./assets/ar_dr/original.png" width="24%" title="03461_421"/>
+<img src="./assets/ar_dr/ar_no_dr.png" width="24%" title="03461_421_RFR"/>
+<img src="./assets/ar_dr/masked.png" width="24%" title="03461_421_PICNet"/>
+<img src="./assets/ar_dr/ar.png" width="24%" title="03461_421_Ours"/>
+</p>
+
+>A demonstration of our method, which levitates AR/DR applications. (a) original panorama (b) augmented reality
+without diminished reality (c) highlighted object for removal (d) our inpainting method result (e) augmented reality with
+diminished reality, the result is much more natural.
 
 # Acknowledgements
 This project has received funding from the European Union's Horizon 2020 innovation programme ATLANTIS under grant agreement No 951900.
