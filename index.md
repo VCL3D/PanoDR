@@ -67,7 +67,7 @@ the diminishing mask.
 <img src="./assets/qualitative/scene_03461_2D_rendering_421_panorama_ours.png" width="24%" title="03461_421_Ours"/>
 </p>
 
->From Left to right: Input image with the diminished area masked with transparent red, RFR, PICNet and ours.
+>From Left to right: i) Input image with the diminished area masked with transparent red, ii) RFR, iii) PICNet and iv) ours.
 
 # AR/DR Application
 
@@ -78,8 +78,8 @@ the diminishing mask.
 <img src="./assets/ar_dr/ar.png" width="24%" title="03461_421_Ours"/>
 </p>
 
->A demonstration of our method, which levitates AR/DR applications. (a) original panorama (b) augmented reality
-without diminished reality (c) highlighted object for removal (d) our inpainting method result (e) augmented reality with
+>A demonstration of our method, which levitates AR/DR applications. From left to right: i) original panorama ii) augmented reality
+without diminished reality iii) highlighted object for removal iv) our inpainting method result v) augmented reality with
 diminished reality, the result is much more natural.
 
 # Acknowledgements
