@@ -18,7 +18,7 @@ the diminishing mask.
 
 # Qualitative results for diminishing objects from scenes in our test set. 
 <p float="left">
-<img src="./assets/qualitative/scene_03362_2D_rendering_13188_panorama_masked_inv_mask_orig.png" width="24%" title="03362_13188"/>
+<img src="./assets/qualitative/scene_03362_2D_rendering_13188_panorama_masked_inv_mask_orig-min.png" width="24%" title="03362_13188"/>
 <img src="./assets/qualitative/scene_03362_13188_rfr.png" width="24%" title="03362_13188_Ours"/>
 <img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_PIC.png" width="24%" title="03362_13188_Ours"/>
 <img src="./assets/qualitative/_scene_03362_2D_rendering_13188_panorama_ours.png" width="24%" title="03362_13188_Ours"/>
