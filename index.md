@@ -1,7 +1,17 @@
 # PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes
 
-# Abstract
 <img src="./assets/teaser.png" width="1000"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
+
+Diminishing the highlighted (<span style="color:blue">some *red* text</span> mask) object in indoor spherical panorama images. White lines annotate the
+scene’s layout in panorama and perspective views. Left to right: i) masked object to remove, ii) pure inpainting result of
+state-of-the-art methods (top row: RFR [18], bottom row: PICNet [46]), iii) perspective view of inpainted region by these
+methods better shows that they do not necessarily respect the scene’s structural layout, iv) our panorama inpainting that takes
+a step towards preserving the structural reality, v) perspective view of inpainted region by our model, showing superior results
+both in texture generation and layout preservation. The results in this figure depict cases where RFR and PICNet provide
+reasonable structural coherency and aim at showcasing our model’s finer-grained accuracy. Figure 4 presents more qualitative
+examples where the structural in-coherency of RFR and PICNet is more evident
+
+# Abstract
 The rising availability of commercial 360o cameras that democratize indoor scanning, has increased the interest for novel applications, such as interior space re-design. Diminished Reality (DR) fulfills the requirement of such applications, to remove existing objects in the scene, essentially translating this to a counterfactual inpainting task. While recent advances in data-driven inpainting have shown significant progress in generating realistic samples, they are not constrained to produce results with reality mapped
 structures. To preserve the ‘reality’ in indoor (re-)planning applications, the scene’s structure preservation is crucial. To ensure structure-aware counterfactual inpainting, we propose a model that initially predicts the structure of a indoor scene and then uses it to guide the reconstruction of an empty – background only – representation of the same scene. We train and compare against other state-of-the-art methods on a version of the Structured3D dataset [47] modified for DR, showing superior results in both quantitative metrics and qualitative results, but more interestingly, our approach exhibits a much faster convergence rate.
 
