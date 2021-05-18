@@ -69,7 +69,7 @@ the diminishing mask.
 
 >From Left to right: i) Input image with the diminished area masked with transparent red, ii) RFR, iii) PICNet and iv) ours.
 
-# AR/DR Application
+# AR Application
 
 <p float="left">
 <img src="./assets/ar_dr/original.png" width="24%" title="03461_421"/>
