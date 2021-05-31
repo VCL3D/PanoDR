@@ -6,7 +6,7 @@
 
 ## Prerequisites
 - Windows10 or Linux
-- Python 3
+- Python 3.7
 - CPU or NVIDIA GPU + CUDA CuDNN
 - PyTorch 1.7.1 (or higher)
 
@@ -32,6 +32,8 @@ You can download the pre-trained models from [here](https://drive.google.com/dri
 and specify the arguments `--eval_chkpnt_folder` and `--segmentation_model_chkpnt`, respectively.
 Assuming the input image and mask are in the format as in the `input` folder run: 
 
-`python src/train/test.py --inference --eval_path input/`
+```bash
+python src/train/test.py --inference --eval_path input/
+```
 
 
