@@ -8,6 +8,7 @@
 - Windows10 or Linux
 - Python 3
 - CPU or NVIDIA GPU + CUDA CuDNN
+- PyTorch 1.7.1 (or higher)
 
 ## Installation
 - Clone this repo:
@@ -15,6 +16,14 @@
 ```bash
 git clone https://github.com/VCL3D/PanoDR.git
 cd PanoDR
+```
+
+- We recommend setting up a virtual environment (follow the `virtualenv` documentation).
+Once your environment is set up and activated, install the `vcl3datlantis` package:
+
+```bash
+cd src/utils
+pip install -e.
 ```
 
 ## Inference
