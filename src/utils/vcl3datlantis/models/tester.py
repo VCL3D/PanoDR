@@ -7,15 +7,9 @@ from vcl3datlantis.metrics import *
 import cv2
 from vcl3datlantis.models.PanoDR.PanoDR_module import * #latest
 
-def testing(args, dataloader, device):
+def testing(args, device, dataloader=None):
     device = torch.device("cuda:" + str(args.gpu_id) if (torch.cuda.is_available() and int(args.gpu_id) >= 0) else "cpu")  
     inPaintModel = InpaintingModel(opt=args, device=device)
-    rec = Reconstruction_Metrics(device)
-
-    total_batches = len(iter(dataloader))
-    limit = total_batches
-    epoch = None
-    iteration = None
     checkpoint = torch.load(args.eval_chkpnt_folder, map_location="cuda:{}".format(args.gpu_id))
     inPaintModel.netG.load_state_dict(checkpoint)
 
@@ -28,9 +22,15 @@ def testing(args, dataloader, device):
             msk = cv2.imread(msk_path[i], cv2.IMREAD_UNCHANGED)[:,:,0]
             msk = torch.from_numpy(cv2.resize(msk, (args.width,args.height), interpolation=cv2.INTER_NEAREST)).unsqueeze(0).unsqueeze(0).float().to(device)
             img = torch.from_numpy(cv2.resize(img, (args.width,args.height), interpolation=cv2.INTER_CUBIC)).unsqueeze_(0).permute(0,3,1,2).float().to(device)
-            inPaintModel.inference_file(epoch, img, msk, img_path[i])
+            inPaintModel.inference_file(img, msk, msk_path[i])
     
     else:
+        rec = Reconstruction_Metrics(device)
+        total_batches = len(iter(dataloader))
+        limit = total_batches
+        iteration = None
+        epoch = None
+
         for (i, data) in enumerate(dataloader, 1):
             if i>limit:
                 break

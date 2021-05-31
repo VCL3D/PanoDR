@@ -221,9 +221,11 @@ class InpaintingModel(BaseModel):
         gt_img = gt_img.squeeze_(0).permute(1,2,0).cpu().detach().numpy() 
         cv2.imwrite(gt_path, (cv2.cvtColor(gt_img, cv2.COLOR_RGB2BGR))*255)
 
-    def inference_file(self, epoch, images, mask, _path):
+    def inference_file(self, images, mask, f_name):
 
-        result_path = self.opt.eval_path
+        result_path = os.path.join(self.opt.eval_path, "output/")
+        os.makedirs(result_path, exist_ok=True)
+
         self.f_name = None
         self.images = images/255.0
         self.inverse_mask = mask/255.0
@@ -239,9 +241,9 @@ class InpaintingModel(BaseModel):
         gt_img_masked = self.gt_empty * self.inverse_mask 
         gt_img_masked = gt_img_masked.squeeze_(0).permute(1,2,0).cpu().detach().numpy() 
 
-        pred_path = result_path+"Diminished.png"
-        raw_pred_path = result_path+"Raw_Pred.png"
-        layout_path = result_path+"Layout.png"
+        pred_path = result_path + "diminished_" + os.path.basename(f_name)
+        raw_pred_path = result_path + "raw_pred_" + os.path.basename(f_name)
+        layout_path = result_path + "layout_" + os.path.basename(f_name)
         
         masked_input_np = masked_input.squeeze_(0).permute(1,2,0).cpu().detach().numpy()
         cv2.imwrite(pred_path, (cv2.cvtColor(ret, cv2.COLOR_RGB2BGR))*255)
