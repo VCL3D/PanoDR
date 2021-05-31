@@ -5,23 +5,24 @@ import sys
 
 def parseArguments():
     parser = argparse.ArgumentParser()  
-    parser.add_argument('--train_path', type=str, default='D:/Data/Structure3D/Structure3D/Structured3D')
-    parser.add_argument('--test_path', type=str, default='D:/Data/Structure3D/Structure3D/Structured3D_test')
-    parser.add_argument('--results_path', type=str, default='D:/ATLANTIS/models/Writer/')
-    parser.add_argument('--eval_path', type=str, default='D:/ATLANTIS/models/inference/')
-    parser.add_argument('--eval_chkpnt_folder', type=str, default=r'D:/ATLANTIS/models/checkpoint/albums_gia_page/70_net_G.pth')
-    parser.add_argument('--gt_results_path', type=str, default=r'D:/ATLANTIS/models/GT/')
-    parser.add_argument('--pred_results_path', type=str, default='D:/ATLANTIS/models/Preds/')
-    parser.add_argument('--segmentation_model_chkpnt', type = str, default = 'D:/ATLANTIS/models/unet/Unet_epoch23.model', help = 'Save checkpoints here')
+    parser.add_argument('--train_path', type=str, default='')
+    parser.add_argument('--test_path', type=str, default='')
+    parser.add_argument('--results_path', type=str, default='')
+    parser.add_argument('--eval_path', type=str, default='')
+    parser.add_argument('--eval_chkpnt_folder', type=str, default='')
+    parser.add_argument('--gt_results_path', type=str, default='')
+    parser.add_argument('--pred_results_path', type=str, default='')
+    parser.add_argument('--model_folder', type = str, default = '', help = 'Save checkpoints here')
+    parser.add_argument('--segmentation_model_chkpnt', type = str, default = '', help = 'Save checkpoints here')
     parser.add_argument('--type_sp', type=str, default='SEAN')
     parser.add_argument('--use_argmax', type=bool, default=False) 
     parser.add_argument('--use_sean', type=bool, default=True) 
     parser.add_argument('--inference', type=bool, default=True) 
     parser.add_argument('--num_classes', type=int, default=3)
-    parser.add_argument('--height', type=int, default=256)#256
-    parser.add_argument('--width', type=int, default=512)#512
+    parser.add_argument('--height', type=int, default=256)
+    parser.add_argument('--width', type=int, default=512)
     parser.add_argument('--lr_D', type=float, default=2e-4) 
-    parser.add_argument('--lr', type=float, default=2e-4) #default 1e-5
+    parser.add_argument('--lr', type=float, default=2e-4) 
     parser.add_argument('--epochs', type=int, default=250)
     parser.add_argument('--save_model_every', type=int, default=1)
     parser.add_argument('--batch_size', type=int, default=1)
@@ -38,10 +39,8 @@ def parseArguments():
     parser.add_argument('--experiment_name', type=str)
     parser.add_argument('--adv_loss_type', type=str, default ='HingeGAN', choices=["HingeGAN", "RelativisticAverageHingeGAN", "LSGAN"]) 
     parser.add_argument('--D_max_iters', type=int, default=1)
-    parser.add_argument('--model_folder', type = str, default = 'E:/Users/vgkitsas/deepfill/checkpoints/Spade_w_o_gt_Final/2_upsample/style/sp_15_sean/', help = 'Save checkpoints here')
     parser.add_argument('--structure_model', type=str, default="unet", choices=["unet"])
     parser.add_argument('--pretrain_network', type=int, default=0, help = 'Model is pretrained')
-     #GatedConv params
     parser.add_argument('--load_name', type = str, default ='', help = 'load model name')
     parser.add_argument('--phase', type = str, default = 'test', help = 'load model name')
     parser.add_argument('--init_type', type = str, default = 'normal', help = 'the initialization type')
@@ -62,7 +61,7 @@ def parseArguments():
     parser.add_argument('--norm', type = str, default = 'in', help = 'normalization type')
     parser.add_argument('--b1', type = float, default = 0.5, help = 'Adam: beta 1')
     parser.add_argument('--b2', type = float, default = 0.999, help = 'Adam: beta 2')
-    #visdom
+    #visdom args
     parser.add_argument("--seed", type=int, default=1337, help="Fixed manual seed, zero means no seeding.")
     parser.add_argument('-g','--gpu', type=str, default='0', help='The ids of the GPU(s) that will be utilized. (e.g. 0 or 0,1, or 0,2). Use -1 for CPU.')
     parser.add_argument('-n','--name', type=str, default='Latest_SEAN_eval', help='The name of this train/test. Used when storing information.') 
@@ -82,7 +81,7 @@ import torch
 from torch.random import seed
 from vcl3datlantis.dataloaders.Structured_3D_refined import DRS3D
 from torch.utils.data import DataLoader
-from vcl3datlantis.models.tester360 import *
+from vcl3datlantis.models.tester import *
 import parser
 
 if __name__ == "__main__":

@@ -44,10 +44,8 @@ def parseArguments():
     parser.add_argument('--viz_loss_period', type=int, default=10)
     parser.add_argument('--experiment_name', type=str)
     parser.add_argument('--adv_loss_type', type=str, default ='HingeGAN', choices=["RelativisticAverageHingeGAN", "HingeGAN", "LSGAN"]) 
-
     parser.add_argument('--D_max_iters', type=int, default=1)
     parser.add_argument('--pretrain_network', type=int, default=0, help = 'Model is pretrained')
-    #GatedConv params
     parser.add_argument('--load_name', type = str, default ='', help = 'load model name')
     parser.add_argument('--phase', type = str, default = 'train', help = 'load model name')
     parser.add_argument('--init_type', type = str, default = 'normal', help = 'the initialization type')
@@ -68,7 +66,7 @@ def parseArguments():
     parser.add_argument('--norm', type = str, default = 'in', help = 'normalization type')
     parser.add_argument('--b1', type = float, default = 0.5, help = 'Adam: beta 1')
     parser.add_argument('--b2', type = float, default = 0.999, help = 'Adam: beta 2')
-    #visdom
+    #visdom args
     parser.add_argument("--seed", type=int, default=1337, help="Fixed manual seed, zero means no seeding.")
     parser.add_argument('-g','--gpu', type=str, default='0', help='The ids of the GPU(s) that will be utilized. (e.g. 0 or 0,1, or 0,2). Use -1 for CPU.')
     parser.add_argument('-n','--name', type=str, default='PanoDR_Inpainting_00', help='The name of this train/test. Used when storing information.') 
@@ -77,6 +75,7 @@ def parseArguments():
     parser.add_argument('-d','--disp_iters', type=int, default=5, help='Log training progress (i.e. loss etc.) on console every <disp_iters> iterations.')
     parser.add_argument("--viz_loss_every", type=int, default=5, help = "Iteration interval that losses will be reported at the visdom server for visualization.")
     parser.add_argument("--viz_img_every", type=int, default=15, help = "Iteration interval that images will be reported at the visdom server for visualization.")
+    
     arguments = parser.parse_args()
     return arguments
 
