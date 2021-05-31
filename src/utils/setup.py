@@ -9,7 +9,7 @@ VERSION = '1.3'
 REQUIREMENTS = [
     'numpy',
     'opencv-python',
-    'scikit-image',
+    'scikit-image>=0.16.2',
     'pillow',
     'pyyaml',
     'pycocotools',
@@ -19,7 +19,10 @@ REQUIREMENTS = [
     'visdom',
     'pytorch-lightning',
     'imageio',
-    'unique_color'
+    'unique_color',
+    'albumentations>=0.5.2',
+    'json2html',
+    'Shapely'
 ]
 
 setup(
