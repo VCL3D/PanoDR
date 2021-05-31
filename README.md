@@ -17,3 +17,12 @@ git clone https://github.com/VCL3D/PanoDR.git
 cd PanoDR
 ```
 
+## Inference
+
+You can download the pre-trained models from [here](https://drive.google.com/drive/folders/1TD0wJe4EncunD-ZiQ9RTQVXbIv-1Snz6?usp=sharing)
+and specify the `--eval_chkpnt_folder` and `--segmentation_model_chkpnt`, respectively.
+Assuming the input image and mask are in the format as in the `input` folder run: 
+
+`python src/train/test.py --inference --eval_path input/`
+
+
