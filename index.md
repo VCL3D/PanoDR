@@ -88,7 +88,7 @@ Please direct any questions related to the code & models to gkitsasv “at” it
 # Acknowledgements
 This project has received funding from the European Union's Horizon 2020 innovation programme [ATLANTIS](https://atlantis-ar.eu) under grant agreement No 951900.
 
-<p float="center">
+<p>
 <img src="./assets/atlantis_logo.png" width="45%" title="atlantis_logo" align="left"/>
 <img src="./assets/en_square_cef_logo_0.png" width="45%" title="ec_logo" align="right"/>
 </p>
