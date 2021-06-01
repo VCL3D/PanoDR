@@ -2,8 +2,6 @@ theme: jekyll-theme-cayman
 title: PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes
 description: Structure-aware 360 inpainting
 show_downloads: false
-github:
-  # data_url: 
-  # models_url: 
+github:  
   owner_url: https://github.com/VasilisGks
   owner_name: Vasileios Gkitsas
