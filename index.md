@@ -90,10 +90,9 @@ This project has received funding from the European Union's Horizon 2020 innovat
 
 <p float="left">
 <img src="./assets/eu.png" width="48%" title="eu"/>
-<img src="./assets/atlantis_logo.png" width="48%" title="atlantis_logo"/>
+<img src="./assets/atlantis_logo.png" width="48%" height="75%" title="atlantis_logo"/>
 </p>
 
-![eu](./assets/eu.png) ![atlantis](./assets/atlantis_logo.png)
 
 # References
 <a name="S3D"/>__\[1\]__ Zheng, J., Zhang, J., Li, J., Tang, R., Gao, S. and Zhou, Z., 2020. [Structured3d: A large photo-realistic dataset for structured 3d modeling.](https://arxiv.org/pdf/1908.00222.pdf) In 16th European Conference on Computer Vision, ECCV 2020 (pp. 519-535). Springer Science and Business Media Deutschland GmbH.
