@@ -90,7 +90,7 @@ This project has received funding from the European Union's Horizon 2020 innovat
 
 <p>
 <img src="./assets/atlantis_logo.png" width="45%" title="atlantis_logo" align="left"/>
-<img src="./assets/en_square_cef_logo_0.png" width="45%" title="ec_logo" align="right"/>
+<img src="./assets/en_square_cef_logo_0.png" width="25%" title="ec_logo" align="right"/>
 </p>
 
 # References
