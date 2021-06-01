@@ -82,6 +82,9 @@ the diminishing mask.
 without diminished reality iii) highlighted object for removal iv) our inpainting method result v) augmented reality with
 diminished reality, the result is much more natural.
 
+# Contact
+Please direct any questions related to the code & models to gkitsasv “at” iti “dot” gr or post an issue to the code [repo](https://github.com/VCL3D/PanoDR).
+
 # Acknowledgements
 This project has received funding from the European Union's Horizon 2020 innovation programme ATLANTIS under grant agreement No 951900.
 
