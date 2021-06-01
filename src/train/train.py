@@ -10,7 +10,7 @@ def parseArguments():
     parser.add_argument('--gt_results_path', type=str, default='')
     parser.add_argument('--pred_results_path', type=str, default='')
     parser.add_argument('--segmentation_model_chkpnt', type = str, default = '', help = 'Save checkpoints here') 
-    parser.add_argument('--structure_model', type=str, default="unet", choices=["unet" , "horizonnet"])
+    parser.add_argument('--structure_model', type=str, default="unet", choices=["unet"])
     parser.add_argument('--type_sp', type=str, default='SEAN', choices=["SEAN"])
     parser.add_argument('--model_folder', type = str, default = '', help = 'Save checkpoints here')
     parser.add_argument('--height', type=int, default=256)

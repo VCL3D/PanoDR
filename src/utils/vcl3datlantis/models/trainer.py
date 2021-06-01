@@ -15,7 +15,7 @@ def training(args, dataloader, test_dataloader, device):
     img_viz = visualizers[1]
     plot_viz.config(**vars(args))
 
-    inPaintModel = InpaintingModel(opt=args, device=device)    
+    inPaintModel = PanoDR(opt=args, device=device)    
 
     inPaintModel.print_networks()
     if args.load_name != '':

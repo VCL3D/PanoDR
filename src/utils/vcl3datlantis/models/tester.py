@@ -9,7 +9,7 @@ from vcl3datlantis.models.PanoDR.PanoDR_module import * #latest
 
 def testing(args, device, dataloader=None):
     device = torch.device("cuda:" + str(args.gpu_id) if (torch.cuda.is_available() and int(args.gpu_id) >= 0) else "cpu")  
-    inPaintModel = InpaintingModel(opt=args, device=device)
+    inPaintModel = PanoDR(opt=args, device=device)
     checkpoint = torch.load(args.eval_chkpnt_folder, map_location="cuda:{}".format(args.gpu_id))
     inPaintModel.netG.load_state_dict(checkpoint)
 

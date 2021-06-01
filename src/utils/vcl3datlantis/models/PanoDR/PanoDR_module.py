@@ -15,9 +15,9 @@ from vcl3datlantis.method import spherical as S360
 from .PanoDR_networks import *
 from vcl3datlantis.losses.featureMatching import FeatureMatchingLoss
 
-class InpaintingModel(BaseModel):
+class PanoDR(BaseModel):
     def __init__(self, act=F.elu, opt=None, device=None):
-        super(InpaintingModel, self).__init__()
+        super(PanoDR, self).__init__()
         self.opt = opt
         self.init(opt)
         self.device = device
