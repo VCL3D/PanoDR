@@ -87,7 +87,7 @@ Please direct any questions related to the code & models to gkitsasv “at” it
 
 # Acknowledgements
 
-<a href="https://atlantis-ar.eu" ><img src="./assets/atlantis_logo.png" width="75%" title="atlantis_logo"/></a> <img src="./assets/en_square_cef_logo_0.png" width="24%" title="ec_logo"/>
+<a href="https://atlantis-ar.eu" ><img src="./assets/atlantis_logo.png" width="75%" title="atlantis_logo"/></a> <a href="https://cordis.europa.eu/project/id/951900"><img src="./assets/en_square_cef_logo_0.png" width="24%" title="ec_logo"/></a>
 
 This project has received funding from the European Union's Horizon 2020 innovation programme [ATLANTIS](https://atlantis-ar.eu) under grant agreement No 951900.
 
