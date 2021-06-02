@@ -19,7 +19,10 @@ def testing(args, device, dataloader=None):
         for i in range(len(img_path)):
             img = cv2.imread(img_path[i], cv2.IMREAD_UNCHANGED)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            msk = cv2.imread(msk_path[i], cv2.IMREAD_UNCHANGED)[:,:,0]
+            try:
+                msk = cv2.imread(msk_path[i], cv2.IMREAD_UNCHANGED)[:,:,0]
+            except:
+                msk = cv2.imread(msk_path[i], cv2.IMREAD_UNCHANGED)
             msk = torch.from_numpy(cv2.resize(msk, (args.width,args.height), interpolation=cv2.INTER_NEAREST)).unsqueeze(0).unsqueeze(0).float().to(device)
             img = torch.from_numpy(cv2.resize(img, (args.width,args.height), interpolation=cv2.INTER_CUBIC)).unsqueeze_(0).permute(0,3,1,2).float().to(device)
             inPaintModel.inference_file(img, msk, msk_path[i])
