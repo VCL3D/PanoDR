@@ -4,6 +4,10 @@
 [![Workshop](http://img.shields.io/badge/OmniCV-2021-lightblue.svg?style=plastic)](https://sites.google.com/view/omnicv2021/home)
 [![Project Page](http://img.shields.io/badge/Project-Page-blueviolet.svg?style=plastic)](https://vcl3d.github.io/PanoDR/)
 
+## License
+
+All rights reserved. Licensed under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) (Attribution-NonCommercial-NoDerivatives 4.0 International)
+
 ## Prerequisites
 - Windows10 or Linux
 - Python 3.7
@@ -25,6 +29,10 @@ Once your environment is set up and activated, install the `vcl3datlantis` packa
 cd src/utils
 pip install -e.
 ```
+
+## Dataset
+
+We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. For training and testing we follow the official split of the authors. We follow the official training, validation, and testing splits as defined by the authors.
 
 ## Inference
 
