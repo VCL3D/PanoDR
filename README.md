@@ -32,7 +32,7 @@ pip install -e.
 
 ## Dataset
 
-We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. For training and testing we follow the official split of the authors. We follow the official training, validation, and testing splits as defined by the authors.
+We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. We follow the official training, validation, and testing splits as defined by the authors.
 
 ## Inference
 
