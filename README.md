@@ -35,6 +35,10 @@ pip install -e.
 
 We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. We follow the official training, validation, and testing splits as defined by the authors.
 
+## Training 
+
+More info regarding the training of the model will be available soon!
+
 ## Inference
 
 You can download the pre-trained models from [here](https://drive.google.com/drive/folders/1TD0wJe4EncunD-ZiQ9RTQVXbIv-1Snz6?usp=sharing)
@@ -44,8 +48,3 @@ Assuming the input image and mask are in the format as in the `input` folder run
 ```bash
 python src/train/test.py --inference --eval_path input/
 ```
-
-## Training 
-
-More info regarding the training of the model will be available soon!
-
