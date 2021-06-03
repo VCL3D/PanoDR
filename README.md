@@ -45,4 +45,7 @@ Assuming the input image and mask are in the format as in the `input` folder run
 python src/train/test.py --inference --eval_path input/
 ```
 
+## Training 
+
+More info regarding the training of the model will be available soon!
 
