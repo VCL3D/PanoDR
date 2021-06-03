@@ -88,7 +88,7 @@ diminished reality, the result is much more natural.
 
 This project has received funding from the European Union's Horizon 2020 innovation programme [ATLANTIS](https://atlantis-ar.eu) under grant agreement No 951900.
 
-Our code borrows from from [SEAN](https://github.com/ZPdesu/SEAN) and [Deepfll-v2](https://github.com/zhaoyuzhi/deepfillv2).
+Our code borrows from from [SEAN](https://github.com/ZPdesu/SEAN) and [deepfillv2](https://github.com/zhaoyuzhi/deepfillv2).
 
 # References
 <a name="S3D"/>__\[1\]__ Zheng, J., Zhang, J., Li, J., Tang, R., Gao, S. and Zhou, Z., 2020. [Structured3d: A large photo-realistic dataset for structured 3d modeling.](https://arxiv.org/pdf/1908.00222.pdf) In 16th European Conference on Computer Vision, ECCV 2020 (pp. 519-535). Springer Science and Business Media Deutschland GmbH.
