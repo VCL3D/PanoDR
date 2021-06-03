@@ -44,3 +44,10 @@ Assuming the input image and mask are in the format as in the `input` folder run
 ```bash
 python src/train/test.py --inference --eval_path input/
 ```
+
+
+# Acknowledgements
+
+This project has received funding from the European Union's Horizon 2020 innovation programme [ATLANTIS](https://atlantis-ar.eu) under grant agreement No 951900.
+
+Our code borrows from [SEAN](https://github.com/ZPdesu/SEAN) and [deepfillv2](https://github.com/zhaoyuzhi/deepfillv2).
