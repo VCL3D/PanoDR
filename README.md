@@ -5,13 +5,14 @@
 [![Workshop](http://img.shields.io/badge/OmniCV-2021-lightblue.svg?style=plastic)](https://sites.google.com/view/omnicv2021/home)
 [![Project Page](http://img.shields.io/badge/Project-Page-blueviolet.svg?style=plastic)](https://vcl3d.github.io/PanoDR/)
 
-![](https://github.com/VCL3D/PanoDR/tree/gh-pages/assets/model.png?raw=true) 
 
 ## Prerequisites
 - Windows10 or Linux
 - Python 3.7
 - CPU or NVIDIA GPU + CUDA CuDNN
 - PyTorch 1.7.1 (or higher)
+
+![](https://github.com/VCL3D/PanoDR/tree/gh-pages/assets/model.png?raw=true) 
 
 ## Installation
 - Clone this repo:
