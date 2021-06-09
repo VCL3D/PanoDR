@@ -6,13 +6,15 @@
 [![Project Page](http://img.shields.io/badge/Project-Page-blueviolet.svg?style=plastic)](https://vcl3d.github.io/PanoDR/)
 
 
+![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/model.png) 
+
+
+
 ## Prerequisites
 - Windows10 or Linux
 - Python 3.7
 - CPU or NVIDIA GPU + CUDA CuDNN
 - PyTorch 1.7.1 (or higher)
-
-![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/model.png) 
 
 ## Installation
 - Clone this repo:
