@@ -12,7 +12,7 @@
 - CPU or NVIDIA GPU + CUDA CuDNN
 - PyTorch 1.7.1 (or higher)
 
-![](https://github.com/VCL3D/PanoDR/tree/gh-pages/assets/model.png?raw=true) 
+![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/model.png) 
 
 ## Installation
 - Clone this repo:
