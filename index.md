@@ -18,9 +18,9 @@ structures. To preserve the ‘reality’ in indoor (re-)planning applications, 
 <img src="./assets/model.png" width="1200"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
 
 >The input masked image is encoded twice, once densely by the structure UNet encoder outputing a layout segmentation map,
-and once by the surrounding context encoder, capturing the scene’s context while taking the mask into account via series
+and once by the surrounding context encoder, capturing the scene’s context while taking the mask into account via a series
 gated convolutions. These are then combined by the structure-aware decoder with a set of per layout component style
-codes that are extracted by the complete input image. Two SEAN residual blocks ensure the structural alignment of the
+codes that are extracted from the complete input image. Two SEAN residual blocks ensure the structural alignment of the
 reconstructed background image that is supervised by low- and high-level losses, as well as an adversarial loss driven by the
 background image discriminator. The final diminished result is created via compositing the predicted and input images using
 the diminishing mask.
