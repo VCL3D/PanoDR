@@ -48,7 +48,7 @@ We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a mod
 </tr>
 </table>
 
-It is obvious that the diminished scene has large photometric insconsistency, which is not suitable for deep learning algorithms. To overcome this barrier, we start _augment_ the __empty__ rooms with objects from the corresponding __full__ room configurations, so that replacing a region is photoconsistent.
+It is obvious that the diminished scene has large photometric insconsistency at the diminished region, which is not suitable for deep learning algorithms. To overcome this barrier, we start to _augment_ the __empty__ rooms with objects from the corresponding __full__ room configurations, so that replacing a region is photoconsistent.
 <table align='center'>
 <tr>
  <td><img src='input/scene_03402_521088.png' width='512' height='256'/></td>
@@ -59,6 +59,7 @@ It is obvious that the diminished scene has large photometric insconsistency, wh
  <td>Augmented room with diminished table</td>
 </tr>
 </table>
+The only issue of this approach of creating samples is the abscence of shadows, which makes the whole scene less realistic, but still the gain of this method is greater for Diminished Reality applications.
 
 ## Training 
 
