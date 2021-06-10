@@ -30,12 +30,35 @@ Once your environment is set up and activated, install the `vcl3datlantis` packa
 
 ```bash
 cd src/utils
-pip install -e.
+pip install -e .
 ```
 
 ## Dataset
 
 We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. We follow the official training, validation, and testing splits as defined by the authors.
+[Structured3D](https://structured3d-dataset.org/) provides 3 different room configurations, __empty__, __simple__ and __full__, which,in theory, enables this dataset for Diminished Reality applications. In practice, this statement doesn't hold since the rooms are rendered with ray-tracing, fact that affects the global illumination and texture, so replacing a region from the __full__ configuration with the corresponding __empty__ one does not create photo-consistent results.
+<table align='center'>
+<tr>
+ <td><img src='input/scene_03402_521088_masked_highlighted.png' width='512' height='256'/></td>
+ <td><img src='input/scene_03402_521088_masked_erroneous.png' width='512' height='256'/></td>
+</tr>
+<tr>
+ <td>Full room configuration with annotated the object for diminsing</td>
+ <td>Full room configuration with replaced region from empty room configuration</td>
+</tr>
+</table>
+
+It is obvious that the diminished scene has large photometric insconsistency, which is not suitable for deep learning algorithms. To overcome this barrier, we start _augment_ the __empty__ rooms with objects from the corresponding __full__ room configurations, so that replacing a region is photoconsistent.
+<table align='center'>
+<tr>
+ <td><img src='input/scene_03402_521088.png' width='512' height='256'/></td>
+ <td><img src='input/scene_03402_521088_masked_correct.png' width='512' height='256'/></td>
+</tr>
+<tr>
+ <td>Empty room configuration with augmented objects</td>
+ <td>Augmented room with diminished table</td>
+</tr>
+</table>
 
 ## Training 
 
