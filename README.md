@@ -14,7 +14,7 @@
 ## Prerequisites
 - Windows10 or Linux
 - Python 3.7
-- CPU or NVIDIA GPU + CUDA CuDNN
+- NVIDIA GPU + CUDA CuDNN
 - PyTorch 1.7.1 (or higher)
 
 ## Installation
