@@ -15,7 +15,7 @@ The rising availability of commercial 360° cameras that democratize indoor scan
 structures. To preserve the ‘reality’ in indoor (re-)planning applications, the scene’s structure preservation is crucial. To ensure structure-aware counterfactual inpainting, we propose a model that initially predicts the structure of a indoor scene and then uses it to guide the reconstruction of an empty – background only – representation of the same scene. We train and compare against other state-of-the-art methods on a version of the Structured3D dataset [1] modified for DR, showing superior results in both quantitative metrics and qualitative results, but more interestingly, our approach exhibits a much faster convergence rate.
 
 #  PanoDR Model Architecture
-<img src="./assets/model.png" width="1200"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
+<img src="./assets/PanoDR_Model.png" width="1200"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
 
 >The input masked image is encoded twice, once densely by the structure UNet encoder outputing a layout segmentation map,
 and once by the surrounding context encoder, capturing the scene’s context while taking the mask into account via a series
