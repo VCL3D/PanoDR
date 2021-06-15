@@ -7,7 +7,7 @@
 
 
 # Model Architecture <br />
-![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/model.png) <br />
+![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/PanoDR_Model.png) <br />
 
  
 
