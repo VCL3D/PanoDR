@@ -40,7 +40,7 @@ We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a mod
 <table align='center'>
 <tr>
  <td><img src='https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/dataset/scene_03402_521088_masked_highlighted.png' width='512' height='256'/></td>
- <td><img src='input/scene_03402_521088_masked_erroneous.png' width='512' height='256'/></td>
+ <td><img src='https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/dataset/scene_03402_521088_masked_erroneous.png' width='512' height='256'/></td>
 </tr>
 <tr>
  <td>Full room configuration with annotated the object for diminsing</td>
@@ -51,8 +51,8 @@ We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a mod
 It is obvious that the diminished scene has large photometric insconsistency at the diminished region, which is not suitable for deep learning algorithms. To overcome this barrier, we start to _augment_ the __empty__ rooms with objects from the corresponding __full__ room configurations, so that replacing a region is photoconsistent.
 <table align='center'>
 <tr>
- <td><img src='input/scene_03402_521088.png' width='512' height='256'/></td>
- <td><img src='input/scene_03402_521088_masked_correct.png' width='512' height='256'/></td>
+ <td><img src='https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/dataset/scene_03402_521088.png' width='512' height='256'/></td>
+ <td><img src='https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/dataset/scene_03402_521088_masked_correct.png' width='512' height='256'/></td>
 </tr>
 <tr>
  <td>Empty room configuration with augmented objects</td>
