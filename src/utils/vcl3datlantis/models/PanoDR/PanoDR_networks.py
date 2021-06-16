@@ -14,10 +14,8 @@ class GatedGenerator(nn.Module):
     def __init__(self, opt, device):
         super(GatedGenerator, self).__init__()
         self.opt = opt
-        if self.opt.use_argmax:
-            self._sem_layout = None
-            self.sem_layout = torch.FloatTensor(self.opt.batch_size, self.opt.in_layout_channels, self.opt.height, self.opt.width).to(device)
-            self.sem_layout.zero_()
+        self.sem_layout = None
+        self.soft_sem_layout = None
         if opt.structure_model == "unet":
            self.structure_model = UNet(n_channels = opt.in_layout_channels, n_classes = opt.num_classes)
 
@@ -54,15 +52,15 @@ class GatedGenerator(nn.Module):
 
 
     def forward(self, img, inverse_mask, masked_input, device, use_sean):
-
+        self.sem_layout = torch.zeros((self.opt.batch_size, self.opt.in_layout_channels, self.opt.height, self.opt.width)).float().to(device)
         first_out = masked_input
         structure_model_output = self.structure_model(masked_input).clone() 
 
         if self.opt.use_argmax:
-            self._sem_layout = torch.softmax(structure_model_output, dim = 1)
-            self._sem_layout = torch.argmax(self._sem_layout, dim=1, keepdim=True)
-            self._sem_layout = torch.clamp(self._sem_layout, min=0, max=2)
-            self.sem_layout.scatter_(1, self._sem_layout, 1)
+            self.soft_sem_layout = torch.softmax(structure_model_output, dim = 1)
+            self.soft_sem_layout = torch.argmax(self.soft_sem_layout, dim=1, keepdim=True)
+            self.soft_sem_layout = torch.clamp(self.soft_sem_layout, min=0, max=2)
+            self.sem_layout.scatter_(1, self.soft_sem_layout, 1)
 
         else:
             self.sem_layout = torch.softmax(structure_model_output, dim = 1)

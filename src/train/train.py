@@ -17,7 +17,7 @@ def parseArguments():
     parser.add_argument('--width', type=int, default=512)
     parser.add_argument('--num_classes', type=int, default=3)
     parser.add_argument('--use_sean', type=bool, default=True) 
-    parser.add_argument('--use_argmax', type=bool, default=False) 
+    parser.add_argument('--use_argmax', type=bool, default=True) 
     parser.add_argument('--lr', type=float, default=2e-4) 
     parser.add_argument('--lr_D', type=float, default=2e-4) 
     parser.add_argument('--lr_gamma', type=float, default=0.5) 
@@ -75,7 +75,6 @@ def parseArguments():
     parser.add_argument('-d','--disp_iters', type=int, default=5, help='Log training progress (i.e. loss etc.) on console every <disp_iters> iterations.')
     parser.add_argument("--viz_loss_every", type=int, default=5, help = "Iteration interval that losses will be reported at the visdom server for visualization.")
     parser.add_argument("--viz_img_every", type=int, default=15, help = "Iteration interval that images will be reported at the visdom server for visualization.")
-    
     arguments = parser.parse_args()
     return arguments
 

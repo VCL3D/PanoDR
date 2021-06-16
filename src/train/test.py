@@ -15,7 +15,7 @@ def parseArguments():
     parser.add_argument('--pred_results_path', type=str, default='')
     parser.add_argument('--segmentation_model_chkpnt', type = str, default = '', help = 'Save checkpoints here')
     parser.add_argument('--type_sp', type=str, default='SEAN')
-    parser.add_argument('--use_argmax', type=bool, default=False) 
+    parser.add_argument('--use_argmax', type=bool, default=True) 
     parser.add_argument('--use_sean', type=bool, default=True) 
     parser.add_argument('--inference', type=bool, default=True) 
     parser.add_argument('--num_classes', type=int, default=3)

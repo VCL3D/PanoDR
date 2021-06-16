@@ -48,8 +48,6 @@ class PanoDR(BaseModel):
         self.optimizer_G = torch.optim.Adam(self.netG.parameters(), lr=opt.lr, betas=(self.opt.b1, self.opt.b2))
         self.optimizers = self.optimizers + [self.optimizer_G]
         
-        self.optim_segm = torch.optim.Adam(self.netG.structure_model.parameters(), opt.lr)
-        self.optimizers = self.optimizers + [self.optim_segm]
         self.optimizer_D = torch.optim.Adam(filter(lambda x: x.requires_grad, self.netD.parameters()), lr=opt.lr_D,
                                             betas=(self.opt.b1, self.opt.b2))     
 
@@ -145,12 +143,10 @@ class PanoDR(BaseModel):
         for p in self.netD.parameters():
             p.requires_grad = False
 
-        self.optim_segm.zero_grad()
         self.optimizer_G.zero_grad()
         self.forward_G()
         self.backward_G()
         self.optimizer_G.step()
-        self.optim_segm.step()
 
         for p in self.netD.parameters():
             p.requires_grad = True
@@ -227,8 +223,8 @@ class PanoDR(BaseModel):
         os.makedirs(result_path, exist_ok=True)
 
         self.f_name = None
-        self.images = images/255.0
-        self.inverse_mask = mask/255.0
+        self.images = images
+        self.inverse_mask = mask
         self.mask = (1.0-self.inverse_mask)
         self.gt_empty = self.images
         masked_input = (self.images * self.mask) + self.inverse_mask

@@ -19,7 +19,8 @@ lib64
 # Environments
 .virtual_env
 virtual_env/
-
+src/utils/vcl3datlantis/models/PanoDR/SEAN/spade_arch_end2end.py
+src/utils/vcl3datlantis/models/PanoDR/SEAN/normalization_end2end.py
 #pycharm
 .idea/*
 
