@@ -75,6 +75,18 @@ Assuming the input image and mask are in the format as in the `input` folder run
 python src/train/test.py --inference --eval_path input/
 ```
 
+## Citation
+If you use this code and/or data, please cite the following:
+```
+@inproceedings{gkitsas2021panodr,
+  title={PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes},
+  author={Gkitsas, Vasileios and Sterzentsenko, Vladimiros and Zioulis, Nikolaos and Albanis, Georgios and Zarpalas, Dimitrios},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3716--3726},
+  year={2021}
+}
+```
+
 
 # Acknowledgements
 
