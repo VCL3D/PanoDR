@@ -82,6 +82,18 @@ the diminishing mask.
 without diminished reality iii) highlighted object for removal iv) our inpainting method result v) augmented reality with
 diminished reality, the result is much more natural.
 
+## Citation
+If you use this code and/or data, please cite the following:
+```
+@inproceedings{gkitsas2021panodr,
+  title={PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes},
+  author={Gkitsas, Vasileios and Sterzentsenko, Vladimiros and Zioulis, Nikolaos and Albanis, Georgios and Zarpalas, Dimitrios},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3716--3726},
+  year={2021}
+}
+```
+
 # Acknowledgements
 
 <a href="https://atlantis-ar.eu" ><img src="./assets/atlantis_logo.png" width="75%" title="atlantis_logo"/></a> <a href="https://cordis.europa.eu/project/id/951900"><img src="./assets/en_square_cef_logo_0.png" width="24%" title="ec_logo"/></a>
