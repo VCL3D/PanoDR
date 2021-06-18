@@ -83,7 +83,7 @@ without diminished reality iii) highlighted object for removal iv) our inpaintin
 diminished reality, the result is much more natural.
 
 ## Citation
-If you use this code and/or data, please cite the following:
+If you use this code for your research, please cite the following:
 ```
 @inproceedings{gkitsas2021panodr,
   title={PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes},
