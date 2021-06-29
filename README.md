@@ -3,7 +3,7 @@
 [![Paper](http://img.shields.io/badge/paper-arxiv-critical.svg?style=plastic)](https://arxiv.org/abs/2106.00446)
 [![Conference](http://img.shields.io/badge/CVPR-2021-blue.svg?style=plastic)](http://cvpr2021.thecvf.com/)
 [![Workshop](http://img.shields.io/badge/OmniCV-2021-lightblue.svg?style=plastic)](https://sites.google.com/view/omnicv2021/home)
-[![YouTube](https://img.shields.io/badge/YouTube-red.svg?style=plastic)](https://www.youtube.com/watch?v=xa7Fl2mD4CA&t=26274s)
+[![YouTube](https://img.shields.io/badge/Presentation-YouTube-red.svg?style=plastic)](https://www.youtube.com/watch?v=xa7Fl2mD4CA&t=26274s)
 [![Project Page](http://img.shields.io/badge/Project-Page-blueviolet.svg?style=plastic)](https://vcl3d.github.io/PanoDR/)  <br />
 
 
