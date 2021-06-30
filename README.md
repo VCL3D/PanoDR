@@ -36,7 +36,31 @@ pip install -e .
 
 ## Dataset
 
-We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. We follow the official training, validation, and testing splits as defined by the authors.
+We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. We follow the official training, validation, and testing splits as defined by the authors. After downloading the dataset split the scenes into training train, validation and test folders. The folders should have the following format:
+
+```
+Structured3D/
+    train/
+        scene_00000
+        scene_00001
+        ...
+    test/
+        scene_03250
+        scene_03251
+        ...
+    validation/
+        scene_03000
+        scene_03001
+    ...
+```
+Next, specify the path to train and test folders in order to estimate the dense layout maps and run:
+
+```bash
+python src\utils\vcl3datlantis\dataset\precompute_structure_semantics.py 
+```
+
+
+
 [Structured3D](https://structured3d-dataset.org/) provides 3 different room configurations, __empty__, __simple__ and __full__, which,in theory, enables this dataset for Diminished Reality applications. In practice, this statement doesn't hold since the rooms are rendered with ray-tracing, fact that affects the global illumination and texture, so replacing a region from the __full__ configuration with the corresponding __empty__ one does not create photo-consistent results.
 <table align='center'>
 <tr>
