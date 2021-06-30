@@ -36,7 +36,7 @@ pip install -e .
 
 ## Dataset
 
-We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. We follow the official training, validation, and testing splits as defined by the authors. After downloading the dataset split the scenes into training train, validation and test folders. The folders should have the following format:
+We use [Structured3D](https://structured3d-dataset.org/) dataset. To train a model on the dataset please download the dataset from the official website. We follow the official training, validation, and testing splits as defined by the authors. After downloading the dataset, split the scenes into training train, validation and test folders. The folders should have the following format:
 
 ```
 Structured3D/
