@@ -51,7 +51,7 @@ Structured3D/
     validation/
         scene_03000
         scene_03001
-    ...
+        ...
 ```
 Next, specify the path to train and test folders in order to estimate the dense layout maps and run:
 
