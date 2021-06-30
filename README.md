@@ -53,7 +53,7 @@ Structured3D/
         scene_03001
         ...
 ```
-Next, specify the path to train and test folders in order to estimate the dense layout maps and run:
+In order to estimate the dense layout maps, specify the path to train and test folders and run:
 
 ```bash
 python src\utils\vcl3datlantis\dataset\precompute_structure_semantics.py 
