@@ -44,13 +44,13 @@ Structured3D/
         scene_00000
         scene_00001
         ...
-    test/
-        scene_03250
-        scene_03251
-        ...
     validation/
         scene_03000
         scene_03001
+        ...
+    test/
+        scene_03250
+        scene_03251
         ...
 ```
 In order to estimate the dense layout maps, specify the path to train and test folders and run:
