@@ -1,10 +1,10 @@
 import numpy as np
-#from imantics import Polygons, Mask
+from imantics import Polygons, Mask
 import PIL
 from PIL import Image
-#import shapely
-#from shapely import geometry
-#from shapely.geometry import MultiPolygon, Polygon
+import shapely
+from shapely import geometry
+from shapely.geometry import MultiPolygon, Polygon
 import random
 from skimage import draw
 import cv2
@@ -53,9 +53,12 @@ def poly2mask(vertex_row_coords, vertex_col_coords, shape):
     mask = np.zeros(shape, dtype=np.bool)
     mask[fill_row_coords, fill_col_coords] = True
     return mask
-"""
+
 def getPolyVert(sem_mask):
-  polygons = Mask(sem_mask[:,:,0]).polygons()
+  try:
+    polygons = Mask(sem_mask[:,:,0]).polygons()
+  except:
+    polygons = Mask(sem_mask).polygons()
   row=[];col=[]
 
   for x in polygons.points:
@@ -65,7 +68,7 @@ def getPolyVert(sem_mask):
           row.append(_row) #row vertices
           col.append(_col) #col vertices
   return row, col
-"""
+
 def findCentroid(indices, mean_val):
   return min(enumerate(indices), key=lambda x: abs(x[1]-mean_val))
 
@@ -102,7 +105,6 @@ def getOneMask(contours, _contour, height, width):
       # cv2.waitKey(0)
       f_hull = cv2.bitwise_and(_contour[0], _contour[0], mask = the_mask)
       cv2.fillPoly(f_hull, pts =[bigger], color=255)
-      
     except ValueError:
       f_hull = None
 

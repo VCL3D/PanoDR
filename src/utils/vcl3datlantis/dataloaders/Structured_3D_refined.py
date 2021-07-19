@@ -17,6 +17,7 @@ from torch.utils.data import DataLoader
 from skimage.feature import canny
 from skimage.color import rgb2gray
 import albumentations as A
+from vcl3datlantis.dataloaders.mask2poly_mult import *
 
 FLOOR_ID = 2
 WALL_ID = 1
@@ -296,7 +297,6 @@ class DRS3D(Dataset):
 
         if self._return_full:
             ret_dict.update({"full": torch.from_numpy(full_rgb).permute(2,0,1).float()/255.0})
-
 
         return ret_dict
 

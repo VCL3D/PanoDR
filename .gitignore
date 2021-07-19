@@ -16,11 +16,17 @@ src/*.egg-info
 lib
 lib64
 *egg-info*
+*workspace*
 # Environments
 .virtual_env
 virtual_env/
 src/utils/vcl3datlantis/models/PanoDR/SEAN/spade_arch_end2end.py
 src/utils/vcl3datlantis/models/PanoDR/SEAN/normalization_end2end.py
+src/utils/vcl3datlantis/dataloaders/Structured_3D_refined_2.py
+src/utils/vcl3datlantis/dataloaders/quasi_manhattan_center_of_mass.py
+src/utils/vcl3datlantis/dataloaders/geodesic_distance.py
+src/utils/vcl3datlantis/dataloaders/dr_geodesic_gaussian.py
+src/utils/vcl3datlantis/dataloaders/spherical_grid.py
 #pycharm
 .idea/*
-
+PanoDR_

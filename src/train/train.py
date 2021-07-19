@@ -4,15 +4,15 @@ import sys
 
 def parseArguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train_path', type=str, default='')
-    parser.add_argument('--test_path', type=str, default='')
-    parser.add_argument('--results_path', type=str, default='')
-    parser.add_argument('--gt_results_path', type=str, default='')
-    parser.add_argument('--pred_results_path', type=str, default='')
-    parser.add_argument('--segmentation_model_chkpnt', type = str, default = '', help = 'Save checkpoints here') 
-    parser.add_argument('--structure_model', type=str, default="unet", choices=["unet"])
+    parser.add_argument('--train_path', type=str, default='D:/Data/Structure3D/Structure3D/Structured3D')
+    parser.add_argument('--test_path', type=str, default='D:/Data/Structure3D/Structure3D/Structured3D_test')
+    parser.add_argument('--results_path', type=str, default='D:/ATLANTIS/models/checkpoint/Writer/')
+    parser.add_argument('--gt_results_path', type=str, default='D:/ATLANTIS/models/GT/')
+    parser.add_argument('--pred_results_path', type=str, default='D:/ATLANTIS/models/Preds/')
+    parser.add_argument('--segmentation_model_chkpnt', type = str, default = 'D:/ATLANTIS/models/Unet_epoch23.model', help = 'Save checkpoints here') #unet
+    parser.add_argument('--structure_model', type=str, default="unet", choices=["unet" , "horizonnet"])
     parser.add_argument('--type_sp', type=str, default='SEAN', choices=["SEAN"])
-    parser.add_argument('--model_folder', type = str, default = '', help = 'Save checkpoints here')
+    parser.add_argument('--model_folder', type = str, default = 'D:/ATLANTIS/models/checkpoint/', help = 'Save checkpoints here')
     parser.add_argument('--height', type=int, default=256)
     parser.add_argument('--width', type=int, default=512)
     parser.add_argument('--num_classes', type=int, default=3)
@@ -38,14 +38,20 @@ def parseArguments():
     parser.add_argument('--lambda_l1', type=float, default = 4.0)  
     parser.add_argument('--lambda_l1_coarse', type=float, default = 3.0)
     parser.add_argument('--lambda_adv', type=float, default = 0.2)
-    parser.add_argument('--lambda_d_match', type=float, default = 20.0) 
+    parser.add_argument('--lambda_d_match', type=float, default = 20.0) #15.0 for sp_10(bs 3) , 7.0 (bs 6) for else (10.0 for bs 4) #was 5.0 latest
     parser.add_argument('--lambda_tv', type=float, default = 1.0)  #
     parser.add_argument('--viz_images_period', type=int, default=50)
     parser.add_argument('--viz_loss_period', type=int, default=10)
     parser.add_argument('--experiment_name', type=str)
     parser.add_argument('--adv_loss_type', type=str, default ='HingeGAN', choices=["RelativisticAverageHingeGAN", "HingeGAN", "LSGAN"]) 
+
     parser.add_argument('--D_max_iters', type=int, default=1)
     parser.add_argument('--pretrain_network', type=int, default=0, help = 'Model is pretrained')
+    parser.add_argument('--g_cnum', type=int, default=32,
+                            help='# of generator filters in first conv layer')
+    parser.add_argument('--d_cnum', type=int, default=64,
+                                help='# of discriminator filters in first conv layer')
+    #GatedConv params
     parser.add_argument('--load_name', type = str, default ='', help = 'load model name')
     parser.add_argument('--phase', type = str, default = 'train', help = 'load model name')
     parser.add_argument('--init_type', type = str, default = 'normal', help = 'the initialization type')
@@ -66,7 +72,7 @@ def parseArguments():
     parser.add_argument('--norm', type = str, default = 'in', help = 'normalization type')
     parser.add_argument('--b1', type = float, default = 0.5, help = 'Adam: beta 1')
     parser.add_argument('--b2', type = float, default = 0.999, help = 'Adam: beta 2')
-    #visdom args
+    #visdom
     parser.add_argument("--seed", type=int, default=1337, help="Fixed manual seed, zero means no seeding.")
     parser.add_argument('-g','--gpu', type=str, default='0', help='The ids of the GPU(s) that will be utilized. (e.g. 0 or 0,1, or 0,2). Use -1 for CPU.')
     parser.add_argument('-n','--name', type=str, default='PanoDR_Inpainting_00', help='The name of this train/test. Used when storing information.') 
@@ -75,6 +81,7 @@ def parseArguments():
     parser.add_argument('-d','--disp_iters', type=int, default=5, help='Log training progress (i.e. loss etc.) on console every <disp_iters> iterations.')
     parser.add_argument("--viz_loss_every", type=int, default=5, help = "Iteration interval that losses will be reported at the visdom server for visualization.")
     parser.add_argument("--viz_img_every", type=int, default=15, help = "Iteration interval that images will be reported at the visdom server for visualization.")
+
     arguments = parser.parse_args()
     return arguments
 
@@ -96,5 +103,5 @@ if __name__ == "__main__":
                 args.batch_size, shuffle=True, num_workers=2)
         test_dataset =DataLoader(DRS3D(args.test_path, args.width, args.height, 0.8, 0.01, roll = False,  layout_extras = False), 
                 args.test_batch_size, shuffle=False, num_workers=2)
-
+        
         training(args, train_dataset, test_dataset, device)

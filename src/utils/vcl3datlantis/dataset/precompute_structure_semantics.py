@@ -5,7 +5,7 @@ import tqdm
 from vcl3datlantis.dataloaders.layout2sem import *
 from vcl3datlantis.dataset.store_paths import loadPaths
 
-root_path = r"D:\VCL\Dataset\Structured3D\Structured3D"
+root_path = r"D:\Data\Structure3D\Structure3D\Structured3D"
 
 if __name__ == "__main__":
     if os.path.isdir(root_path):
