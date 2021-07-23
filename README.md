@@ -71,7 +71,7 @@ In order to train the model, first specify the required parameters:
  - `--model_folder` : The folder where checkpoints are saved
  
  After starting visdom on ther server: `python -m visdom` 
- run: `python train.py --visdom`
+ run: `python src/traintrain.py --visdom`
 
 ## Inference
 
