@@ -60,7 +60,7 @@ python src\utils\vcl3datlantis\dataset\precompute_structure_semantics.py
 ```
 
 ## Training 
-Specify the required parameters:
+In order to train the model, first specify the required parameters:
 
  - `--train_path` : /../Structured3D/train/
  - `--test_path` : /../Structured3D/test/
