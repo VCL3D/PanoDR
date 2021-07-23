@@ -60,8 +60,18 @@ python src\utils\vcl3datlantis\dataset\precompute_structure_semantics.py
 ```
 
 ## Training 
+Specify the required parameters:
 
-More info regarding the training of the model will be available soon!
+ - `--train_path` : /../Structured3D/train/
+ - `--test_path` : /../Structured3D/test/
+ - `--results_path` : The folder where metrics are saved
+ - `--gt_results_path` : The folder where ground truth images are saved for testing
+ - `--pred_results_path` : The folder where predicted images are saved for testing
+ - `--segmentation_model_chkpnt` : The path for the pre-trained dense layout estimation model
+ - `--model_folder` : The folder where checkpoints are saved
+ 
+ After starting visdom on ther server `python -m visdom` 
+ run: `python train.py --visdom`
 
 ## Inference
 
