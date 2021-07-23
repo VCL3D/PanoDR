@@ -70,7 +70,7 @@ Specify the required parameters:
  - `--segmentation_model_chkpnt` : The path for the pre-trained dense layout estimation model
  - `--model_folder` : The folder where checkpoints are saved
  
- After starting visdom on ther server `python -m visdom` 
+ After starting visdom on ther server: `python -m visdom` 
  run: `python train.py --visdom`
 
 ## Inference
