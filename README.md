@@ -77,7 +77,7 @@ In order to train the model, first specify the required parameters:
  
  run: 
  ```bash 
- python src/traintrain.py --visdom 
+ python src/train/train.py --visdom 
  ```
 
 ## Inference
