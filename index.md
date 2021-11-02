@@ -100,10 +100,11 @@ The only issue of this approach of creating samples is the abscence of shadows, 
 # AR Application
 
 <p float="left">
-<img src="./assets/ar_dr/original.png" width="24%" title="03461_421"/>
-<img src="./assets/ar_dr/ar_no_dr.png" width="24%" title="03461_421_RFR"/>
-<img src="./assets/ar_dr/masked.png" width="24%" title="03461_421_PICNet"/>
-<img src="./assets/ar_dr/ar.png" width="24%" title="03461_421_Ours"/>
+<img src="./assets/ar_dr/original.png" width="20%" title="03461_421"/>
+<img src="./assets/ar_dr/ar_no_dr.png" width="20%" title="03461_421_RFR"/>
+<img src="./assets/ar_dr/masked.png" width="20%" title="03461_421_PICNet"/>
+<img src="./assets/ar_dr/inpainted.png" width="20%" title="03461_421_Inpainted"/>
+<img src="./assets/ar_dr/ar.png" width="20%" title="03461_421_Ours"/>
 </p>
 
 >A demonstration of our method, which levitates AR/DR applications. From left to right: i) original panorama ii) augmented reality
