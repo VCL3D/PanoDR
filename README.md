@@ -1,6 +1,6 @@
 # PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes.
 
-[![Paper](http://img.shields.io/badge/paper-arxiv-critical.svg?style=plastic)](https://arxiv.org/abs/2106.00446)
+[![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=plastic)](https://github.com/VasilisGks/PanoDR_web_app)
 [![Conference](http://img.shields.io/badge/CVPR-2021-blue.svg?style=plastic)](http://cvpr2021.thecvf.com/)
 [![Workshop](http://img.shields.io/badge/OmniCV-2021-lightblue.svg?style=plastic)](https://sites.google.com/view/omnicv2021/home)
 [![YouTube](https://img.shields.io/badge/Presentation-YouTube-red.svg?style=plastic)](https://www.youtube.com/watch?v=xa7Fl2mD4CA&t=26274s)
