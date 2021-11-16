@@ -114,9 +114,9 @@ diminished reality, the result is much more natural.
 # Web Application with Streamlit
 [![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=plastic)](https://github.com/VasilisGks/PanoDR_web_app)
 <br />
-<br />
 
 ![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif) <br />
+
 <br />
 
 ## Citation
