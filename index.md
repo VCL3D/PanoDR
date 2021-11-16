@@ -111,6 +111,11 @@ The only issue of this approach of creating samples is the abscence of shadows, 
 without diminished reality iii) highlighted object for removal iv) our inpainting method result v) augmented reality with
 diminished reality, the result is much more natural.
 
+# Web Application with Streamlit
+[![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=plastic)](https://github.com/VasilisGks/PanoDR_web_app)
+<br />
+![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif) <br />
+
 ## Citation
 If you use this code for your research, please cite the following:
 ```
