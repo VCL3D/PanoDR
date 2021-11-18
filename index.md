@@ -112,10 +112,10 @@ without diminished reality iii) highlighted object for removal iv) our inpaintin
 diminished reality, the result is much more natural.
 
 # Web Application with Streamlit
-[![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=plastic)](https://github.com/VasilisGks/PanoDR_web_app)
-<br />
-<img src="./assets/web_app_2.gif" width="1200"  title="StreamlitWebApp" alt="Web app usage example' example." align="center"/>
+[![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=for-the-badge)](https://github.com/VasilisGks/PanoDR_web_app)
 
+<br />
+<a href="https://github.com/VasilisGks/PanoDR_web_app"><<img src="./assets/web_app_2.gif" width="1200"  title="StreamlitWebApp" alt="Web app usage example' example." align="center"/>>
 <br />
 
 ## Citation
