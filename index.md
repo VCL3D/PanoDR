@@ -117,6 +117,7 @@ diminished reality, the result is much more natural.
 
  ![](https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif) <br />
 
+<br />
 
 ## Citation
 If you use this code for your research, please cite the following:
