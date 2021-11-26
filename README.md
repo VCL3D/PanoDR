@@ -91,6 +91,9 @@ Assuming the input image and mask are in the format as in the `input` folder run
 python src/train/test.py --inference --eval_path input/
 ```
 
+## Model service 
+
+
 ## Citation
 If you use this code for your research, please cite the following:
 ```
