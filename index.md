@@ -1,5 +1,13 @@
 # PanoDR: Spherical Panorama Diminished Reality for Indoor Scenes
 
+
+# Web Application with Streamlit
+[![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=for-the-badge)](https://github.com/VasilisGks/PanoDR_web_app)
+
+
+ <img src="https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif" width="100%" title="Streamlit Web App"/>
+ 
+
 <img src="./assets/teaser.png" width="1000"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
 
 >Diminishing the highlighted (<span style="color:red">red</span> mask) object in indoor spherical panorama images. White lines annotate the
@@ -110,13 +118,6 @@ The only issue of this approach of creating samples is the abscence of shadows, 
 >A demonstration of our method, which levitates AR/DR applications. From left to right: i) original panorama ii) augmented reality
 without diminished reality iii) highlighted object for removal iv) our inpainting method result v) augmented reality with
 diminished reality, the result is much more natural.
-
-# Web Application with Streamlit
-[![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=for-the-badge)](https://github.com/VasilisGks/PanoDR_web_app)
-
-
- <img src="https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif" width="100%" title="Streamlit Web App"/>
- 
 
 ## Citation
 If you use this code for your research, please cite the following:
