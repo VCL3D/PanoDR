@@ -119,7 +119,7 @@ diminished reality, the result is much more natural.
 
 
 # Web Application with Streamlit
- <img src="https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif" width="90%" title="Streamlit Web App"/>
+ <img src="./assets/web_app_2.gif" width="100%" title="Streamlit Web App"/>
 
 
 ## Citation
