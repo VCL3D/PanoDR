@@ -5,7 +5,7 @@
 [![Paper](https://img.shields.io/badge/Web-App-purple.svg?style=for-the-badge)](https://github.com/VasilisGks/PanoDR_web_app)
 
 
- <img src="https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif" width="100%" title="Streamlit Web App"/>
+ <img src="https://github.com/VCL3D/PanoDR/blob/gh-pages/assets/web_app_2.gif" width="90%" title="Streamlit Web App"/>
  
 
 <img src="./assets/teaser.png" width="1000"  title="Teaser" alt="Inpainted with scenes' layout annotated." align="center"/>
