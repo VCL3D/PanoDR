@@ -98,7 +98,7 @@ Model is also available via [torchserve](https://pytorch.org/serve/). First, ins
 cd service
 pip install -r requirements.txt
 ``` 
-and download the `.mar` file from [here](https://drive.google.com/file/d/1VU1ybd8YSv90crrXk4_rOR2p1l6KR5L9/view?usp=sharing) and place it under `service/model_store`. In order to serve the model using REST calls, run:
+Next, download the `.mar` file from [here](https://drive.google.com/file/d/1VU1ybd8YSv90crrXk4_rOR2p1l6KR5L9/view?usp=sharing) and place it under `service/model_store`. In order to serve the model using REST calls, run:
 
 ```bash
 torchserve --start --ncs --model-store ./model_store --models panodr=/model_store/panodr.mar torchserve --start --ncs --model-store ./model_store --models panodr=/model_store/panodr.mar 
