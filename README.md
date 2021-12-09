@@ -93,6 +93,32 @@ python src/train/test.py --inference --eval_path input/
 
 ## Model service 
 
+Model is also available via torchserve [torchserve](https://pytorch.org/serve/). In order to serve the model using REST calls, run:
+
+```bash
+cd service
+torchserve --start --ncs --model-store ./model_store --models panodr=/model_store/panodr.mar torchserve --start --ncs --model-store ./model_store --models panodr=/model_store/panodr.mar 
+```
+
+Once the model is served, the endpoint is reachable on `http://IP:8080/predictions/panodr`, with `IP` as selected when configuring torchserve (typically `localhost`, but more [advanced configuration](https://pytorch.org/serve/configuration.html) is also possible to serve the model externally or make it reachable from other machines, using the `inference_address` setting). 
+
+A server is provided for hosting inputs and saving the output files. It can be started via:
+```bash
+cd .\service\Imageserver\ 
+python .\imageserver.py
+```
+All images are hosted on `http://IP:PORT`. Further, an endpoint on `http://IP:PORT/save/inpainted` is provided for obtaining the output files from the service.
+
+The following arguments have to be specified to call the service:
+
+- `DataInputs["rgb"]`
+- `DataInputs["mask"]`
+
+Finally, to obtain predictions from the model, a callback URL json payload needs to be POSTed. Simply run:
+
+```bash
+curl.exe -X POST http://IP:8080/predictions/panodr -H "Content-Type: application/json" -d @/PATH_TO/PanoDR/service/inputs/request.json  
+```
 
 ## Citation
 If you use this code for your research, please cite the following:
