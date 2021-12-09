@@ -1,5 +1,6 @@
 *.vscode
 *.pth
+*.mar
 *.pyc
 ***/LICENSE
 *.ipynb

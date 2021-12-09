@@ -1,0 +1,14 @@
+Flask==1.1.2
+Flask-Cors==3.0.10
+imageserver==0.1.4
+h5py
+numpy
+opencv-python
+Pillow==8.2.0
+requests
+scikit-learn
+torch>=1.6.0
+torchserve==0.3.0
+torchvision
+urllib3
+open3d

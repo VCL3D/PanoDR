@@ -1,0 +1,35 @@
+{
+	"id": "job1",
+    "timestamp": "0123456789", 
+
+	"Source": {
+		"sceneId": "scene1",
+		"type": "panorama",
+        "shape": [3,256,512]
+	},
+
+	"DataInputs":{
+        "rgb": "http://IP:PORT/img_1.JPG",
+        "mask": "http://IP:PORT/mask_1.png",
+        "layout": "http://IP:PORT/layout.txt",
+        "predicted_layout": "http://IP:PORT/layout_latest.png" ,
+        "predicted_empty": "http://IP:PORT/inpainted_empty_latest.png" ,
+        "background_image": "http://IP:PORT/output/background_image.png",
+		"layout_shape": [512,1024,3],
+        "gpu_id": 0
+    },
+	
+	"Parameters": {
+		"url": "http://IP:PORT/inpainted",
+        "duration": "123"
+	},
+
+    "LayoutService":{
+        "use_layout" : "False",
+        "layout_shape": [256,512,3],
+        "layout_url": "http://IP:PORT/output/layout_one_hot.png",
+        "boundary_url": "http://IP:PORT/boundary.png"
+    }
+
+
+}

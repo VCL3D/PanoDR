@@ -1,0 +1,12 @@
+{
+  "createdOn": "02/09/2021 17:39:43",
+  "runtime": "python",
+  "model": {
+    "modelName": "panodr",
+    "serializedFile": "56_net_G.pth",
+    "handler": "panohandler.py",
+    "modelFile": "panodr_net.py",
+    "modelVersion": "1.0"
+  },
+  "archiverVersion": "0.3.0"
+}
