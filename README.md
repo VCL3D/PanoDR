@@ -113,7 +113,7 @@ python .\imageserver.py
 ```
 All images are hosted on `http://IP:PORT`. Further, an endpoint on `http://IP:PORT/save/inpainted` is provided for obtaining the output files from the service.
 
-The following arguments have to be specified to call the service:
+The following arguments have to be specified in `inputs/requests.json` file to call the service:
 
 - `DataInputs["rgb"]`
 - `DataInputs["mask"]`
