@@ -129,7 +129,6 @@ class sc_conv(nn.Module):
         out = self.single_channel_conv(input)
         return out
 
-
 #-----------------------------------------------
 #                Gated ConvBlock
 #-----------------------------------------------
@@ -203,7 +202,6 @@ class GatedConv2d(nn.Module):
 
         #x += self.shortcut(x_in)
 
-
         return x
 
 class TransposeGatedConv2d(nn.Module):
@@ -220,8 +218,6 @@ class TransposeGatedConv2d(nn.Module):
 
 def l2normalize(v, eps = 1e-12):
     return v / (v.norm() + eps)
-
-
 
 
 def __pad_circular_nd(x: torch.Tensor, pad: int, dim) -> torch.Tensor:
@@ -314,9 +310,6 @@ class SpectralNorm(nn.Module):
         self._update_u_v()
         return self.module.forward(*args)
 
-
-#####Normalization Style########################################
-################################################################
 # Returns a function that creates a normalization function
 # that does not condition on semantic map
 def get_nonspade_norm_layer(opt, norm_type='instance'):
@@ -385,12 +378,7 @@ class ACE(nn.Module):
         self.blending_gamma = nn.Parameter(torch.zeros(1), requires_grad=True)
         self.blending_beta = nn.Parameter(torch.zeros(1), requires_grad=True)
         self.noise_var = nn.Parameter(torch.zeros(norm_nc), requires_grad=True)
-        #self.device = torch.device("cuda:" + str(int(0)))
-        #assert config_text.startswith('spade')
-        #parsed = re.search('spade(\D+)(\d)x\d', config_text)
-        #param_free_norm_type = str(parsed.group(1))
         param_free_norm_type = 'instance'
-        #ks = int(parsed.group(2))
         ks = 3 # https://arxiv.org/pdf/1903.07291.pdf page 7/19
         pw = ks // 2
 
@@ -523,16 +511,10 @@ class ACE(nn.Module):
         self.fc_mu18 = nn.Linear(style_length, style_length)
 
 
-
-
 class SPADE(nn.Module):
     def __init__(self, norm_nc, label_nc):
         super().__init__()
-
-        #assert config_text.startswith('spade')
-        #parsed = re.search('spade(\D+)(\d)x\d', config_text)
         param_free_norm_type = 'instance'
-        #ks = int(parsed.group(2))
         ks = 3 # https://arxiv.org/pdf/1903.07291.pdf page 7/19
 
         if param_free_norm_type == 'instance':
@@ -547,15 +529,13 @@ class SPADE(nn.Module):
 
         # The dimension of the intermediate embedding space. Yes, hardcoded.
         nhidden = 128
-        #self.device = torch.device("cuda:" + str(int(0))) 
         pw = ks // 2
         self.mlp_shared = nn.Sequential(
             nn.Conv2d(label_nc, nhidden, kernel_size=ks, padding=pw),
-            #nn.ELU(alpha=1.0,inplace=True)
             nn.ReLU()
-        )#.to(self.device)
-        self.mlp_gamma = nn.Conv2d(nhidden, norm_nc, kernel_size=ks, padding=pw)#.to(self.device)
-        self.mlp_beta = nn.Conv2d(nhidden, norm_nc, kernel_size=ks, padding=pw)#.to(self.device)
+        )
+        self.mlp_gamma = nn.Conv2d(nhidden, norm_nc, kernel_size=ks, padding=pw)
+        self.mlp_beta = nn.Conv2d(nhidden, norm_nc, kernel_size=ks, padding=pw)
 
     def forward(self, x, segmap):
 
@@ -827,7 +807,6 @@ class Up(nn.Module):
         x = torch.cat([x2, x1], dim=1)
         return self.conv(x)
 
-
 class OutConv(nn.Module):
     def __init__(self, in_channels, out_channels):
         super(OutConv, self).__init__()
@@ -835,5 +814,3 @@ class OutConv(nn.Module):
 
     def forward(self, x):
         return self.conv(x)
-
-
