@@ -108,7 +108,7 @@ The only issue of this approach of creating samples is the abscence of shadows, 
 <img src="./assets/qualitative/GS__0023.JPG" width="45%" title="GS__0023"/>
 <img src="./assets/qualitative/GS__0023_inpainted.png" width="45%" title="GS__0023_inpainted"/>
 <img src="./assets/qualitative/GS__0004.JPG" width="45%" title="GS__0004"/>
-<img src="./assets/qualitative/GS__0004_inpainted.JPG" width="45%" title="GS__0004_inpainted"/>
+<img src="./assets/qualitative/GS__0004_inpainted.png" width="45%" title="GS__0004_inpainted"/>
 </p>
 
 # AR Application
