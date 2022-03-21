@@ -105,7 +105,7 @@ The only issue of this approach of creating samples is the abscence of shadows, 
 
 # Qualitative results for diminishing objects in real-world scenes.
 <p float="left">
-<img src="./assets/qualitative/GS__0023.JPG" width="45%" title="GS__0023"/>
+<img src="./assets/qualitative/GS__0025.JPG" width="45%" title="GS__0025"/>
 <img src="./assets/qualitative/GS__0023_inpainted.png" width="45%" title="GS__0023_inpainted"/>
 <img src="./assets/qualitative/GS__0004.JPG" width="45%" title="GS__0004"/>
 <img src="./assets/qualitative/GS__0004_inpainted.png" width="45%" title="GS__0004_inpainted"/>
