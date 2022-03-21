@@ -101,7 +101,15 @@ The only issue of this approach of creating samples is the abscence of shadows, 
 <img src="./assets/qualitative/scene_03461_2D_rendering_421_panorama_ours.png" width="24%" title="03461_421_Ours"/>
 </p>
 
->From Left to right: i) Input image with the diminished area masked with transparent red, ii) RFR, iii) PICNet and iv) ours.
+>From Left to right: i) Input panorama with the diminished area masked with transparent red, ii) RFR, iii) PICNet and iv) ours.
+
+# Qualitative results for diminishing objects in real-world scenes.
+<p float="left">
+<img src="./assets/qualitative/GS__0023.JPG" width="45%" title="GS__0023"/>
+<img src="./assets/qualitative/GS__0023_inpainted.png" width="45%" title="GS__0023_inpainted"/>
+<img src="./assets/qualitative/GS__0004.JPG" width="45%" title="GS__0004"/>
+<img src="./assets/qualitative/GS__0004_inpainted.JPG" width="45%" title="GS__0004_inpainted"/>
+</p>
 
 # AR Application
 
